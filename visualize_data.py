@@ -1,8 +1,6 @@
 import matplotlib.pyplot as plt
 
 def visualize_data(df):
-    df.plot(kind='bar', x='Bank Name', y='Assets (in billion USD)')
-    plt.title('Top Banks by Assets')
-    plt.xlabel('Bank Name')
-    plt.ylabel('Assets (in billion USD)')
+    # Sample visualization (modify as needed)
+    df.plot(kind='bar', x='Bank name', y='Market cap(US$ billion)')
     plt.show()

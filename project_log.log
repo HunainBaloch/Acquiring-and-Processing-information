@@ -1,0 +1,23 @@
+2024-07-10 15:32:36,837:INFO:generated new fontManager
+2024-07-10 15:32:37,126:INFO:Project started
+2024-07-10 15:34:56,111:INFO:Project started
+2024-07-10 15:34:57,369:INFO:Failed to find the table in the HTML structure.
+2024-07-10 15:34:57,369:INFO:Data extraction failed. Exiting the program.
+2024-07-10 15:35:48,924:INFO:Project started
+2024-07-10 15:35:50,078:INFO:Failed to find the table in the HTML structure.
+2024-07-10 15:35:50,078:INFO:Data extraction failed. Exiting the program.
+2024-07-10 15:37:13,524:INFO:Project started
+2024-07-10 15:37:14,689:INFO:Failed to find the table in the HTML structure.
+2024-07-10 15:37:14,702:INFO:HTML content saved to page_content.html for inspection.
+2024-07-10 15:37:14,702:INFO:Data extraction failed. Exiting the program.
+2024-07-10 15:40:40,882:INFO:Project started
+2024-07-10 15:40:42,420:INFO:Failed to find the table in the HTML structure.
+2024-07-10 15:40:42,432:INFO:HTML content saved to page_content.html for inspection.
+2024-07-10 15:40:42,432:INFO:Data extraction failed. Exiting the program.
+2024-07-10 15:42:00,726:INFO:Project started
+2024-07-10 15:42:01,878:INFO:Table 1 class: ['wikitable', 'sortable', 'mw-collapsible']
+2024-07-10 15:42:01,878:INFO:Table 2 class: ['wikitable', 'sortable', 'mw-collapsible']
+2024-07-10 15:42:01,878:INFO:Table 3 class: ['wikitable', 'sortable', 'mw-collapsible']
+2024-07-10 15:42:01,879:INFO:Failed to find the table in the HTML structure.
+2024-07-10 15:42:01,892:INFO:HTML content saved to page_content.html for inspection.
+2024-07-10 15:42:01,892:INFO:Data extraction failed. Exiting the program.

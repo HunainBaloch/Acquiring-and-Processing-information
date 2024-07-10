@@ -9,7 +9,11 @@ def main():
     log_message('Project started')
     
     # Extract data
-    data = extract_data()
+    url = "https://web.archive.org/web/20230908091635/https://en.wikipedia.org/wiki/List_of_largest_banks"
+    data = extract_data(url)
+    if data is None:
+        log_message('Data extraction failed. Exiting the program.')
+        return
     
     # Transform data
     df = transform_data(data)

@@ -1,13 +1,21 @@
 import pandas as pd
 import sqlite3
-from logging_util import log_message
+import logging
 
-def load_to_csv(df, filename='largest_banks.csv'):
-    df.to_csv(filename, index=False)
-    log_message('Data saved to CSV')
+def load_to_csv(df):
+    df.to_csv('largest_banks.csv', index=False)
+    logging.info("Data saved to largest_banks.csv")
 
 def load_to_database(df, db_name='banks.db'):
-    conn = sqlite3.connect(db_name)
-    df.to_sql('banks', conn, if_exists='replace', index=False)
-    conn.close()
-    log_message('Data loaded into SQLite database')
+    try:
+        conn = sqlite3.connect(db_name)
+        logging.info(f"Connected to SQLite database {db_name}")
+
+        # Define the table name and schema
+        table_name = 'banks'
+        df.to_sql(table_name, conn, if_exists='replace', index=False)
+        logging.info(f"Data loaded to {table_name} table in {db_name} database")
+
+        conn.close()
+    except Exception as e:
+        logging.error(f"An error occurred while loading data to database: {e}")

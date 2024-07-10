@@ -1,28 +1,32 @@
+import logging
 import requests
 from bs4 import BeautifulSoup
-from logging_util import log_message
+import pandas as pd
 
-def extract_data():
-    url = 'https://web.archive.org/web/20230908091635/https://en.wikipedia.org/wiki/List_of_largest_banks'
-    response = requests.get(url)
-    soup = BeautifulSoup(response.text, 'html.parser')
-    
-    # Extract relevant data (example: bank names, countries, assets)
-    data = {
-        'Bank Name': [],
-        'Country': [],
-        'Assets (in billion USD)': []
-    }
-    
-    table = soup.find('table', {'class': 'wikitable sortable'})
-    rows = table.find_all('tr')[1:]  # Skip the header row
-    
-    for row in rows:
-        cols = row.find_all('td')
-        if len(cols) > 2:
-            data['Bank Name'].append(cols[1].text.strip())
-            data['Country'].append(cols[2].text.strip())
-            data['Assets (in billion USD)'].append(float(cols[3].text.strip().replace(',', '')))
+logging.basicConfig(level=logging.INFO, format='%(asctime)s:%(levelname)s:%(message)s')
 
-    log_message('Data extracted from Wikipedia')
-    return data
+def extract_data(url):
+    try:
+        logging.info("Extracting data from Wikipedia")
+        response = requests.get(url)
+        if response.status_code != 200:
+            logging.error(f"Failed to retrieve the webpage. Status code: {response.status_code}")
+            return None
+
+        soup = BeautifulSoup(response.content, 'html.parser')
+        tables = soup.find_all('table', {'class': 'wikitable sortable mw-collapsible'})
+        logging.info(f"Found {len(tables)} tables with the specified class")
+
+        if not tables:
+            logging.info("Failed to find the table in the HTML structure.")
+            with open('page_content.html', 'w', encoding='utf-8') as file:
+                file.write(response.text)
+            return None
+
+        df = pd.read_html(str(tables[1]))[0]  # Assuming the required table is the second one
+        logging.info(f"Table extracted with {df.shape[0]} rows and {df.shape[1]} columns.")
+        return df
+
+    except Exception as e:
+        logging.error(f"An error occurred: {e}")
+        return None
