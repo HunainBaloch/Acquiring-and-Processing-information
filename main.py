@@ -8,7 +8,6 @@ from logging_util import log_message
 def main():
     log_message('INFO', 'Project started')
     
-    # Extract data
     url = "https://web.archive.org/web/20230908091635/https://en.wikipedia.org/wiki/List_of_largest_banks"
     try:
         data = extract_data(url)
@@ -20,7 +19,6 @@ def main():
         log_message('ERROR', f"An error occurred during data extraction: {e}")
         return
     
-    # Transform data
     try:
         df = transform_data(data)
         log_message('INFO', 'Data transformation completed successfully')
@@ -28,7 +26,6 @@ def main():
         log_message('ERROR', f"An error occurred during data transformation: {e}")
         return
     
-    # Load data
     try:
         load_to_csv(df)
         log_message('INFO', 'Data loaded to CSV successfully')
@@ -39,7 +36,6 @@ def main():
         log_message('ERROR', f"An error occurred during data loading: {e}")
         return
     
-    # Query data
     query = 'SELECT * FROM banks WHERE Country="USA"'
     try:
         result_df = run_query(query)
@@ -52,7 +48,6 @@ def main():
         log_message('ERROR', f"An error occurred during data querying: {e}")
         return
     
-    # Visualize data
     try:
         visualize_data(result_df)
         log_message('INFO', 'Data visualization completed successfully')

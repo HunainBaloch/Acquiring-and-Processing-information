@@ -21,3 +21,14 @@
 2024-07-10 15:42:01,879:INFO:Failed to find the table in the HTML structure.
 2024-07-10 15:42:01,892:INFO:HTML content saved to page_content.html for inspection.
 2024-07-10 15:42:01,892:INFO:Data extraction failed. Exiting the program.
+2024-07-11 15:41:42,267 - INFO - Project started
+2024-07-11 15:41:44,058 - INFO - Data extraction completed successfully
+2024-07-11 15:41:44,058 - INFO - Data transformation completed successfully
+2024-07-11 15:41:44,066 - INFO - Data loaded to CSV successfully
+2024-07-11 15:41:44,074 - INFO - Data loaded to database successfully
+2024-07-11 15:41:44,074 - INFO - Running the query
+2024-07-11 15:41:44,074 - INFO - Query executed successfully
+2024-07-11 15:41:44,074 - INFO - Connection to SQLite database closed
+2024-07-11 15:41:44,074 - INFO - Data queried successfully
+2024-07-11 15:41:48,065 - INFO - Data visualization completed successfully
+2024-07-11 15:41:48,065 - INFO - Project completed

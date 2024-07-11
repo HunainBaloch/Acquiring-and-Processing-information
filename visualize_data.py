@@ -7,7 +7,6 @@ def visualize_data(df):
         return
 
     try:
-        # Sort the DataFrame by 'Total assets (2022) (US$ billion)' in descending order and take the top 20 for clarity
         df = df.sort_values(by='Total assets (2022) (US$ billion)', ascending=False).head(20)
         
         plt.figure(figsize=(12, 8))
@@ -17,7 +16,7 @@ def visualize_data(df):
         plt.ylabel('Bank Name')
         plt.tight_layout()
         plt.legend(['Total assets (2022) (US$ billion)'], loc='best')
-        plt.gca().invert_yaxis()  # Invert y-axis to have the largest bank on top
+        plt.gca().invert_yaxis()
         plt.show()
         
     except KeyError as e:

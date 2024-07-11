@@ -1,6 +1,14 @@
 import logging
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+# Configure logging to write messages to a file
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler("project_log.log"),
+        logging.StreamHandler()
+    ]
+)
 
 def log_message(level, message):
     if level == 'INFO':
