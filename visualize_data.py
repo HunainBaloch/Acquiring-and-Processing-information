@@ -1,21 +1,23 @@
 import matplotlib.pyplot as plt
 from logging_util import log_message
 
+import matplotlib.pyplot as plt
+from logging_util import log_message
+
 def visualize_data(df):
     if df is None or df.empty:
         print("No data available for visualization.")
         return
 
     try:
-        df = df.sort_values(by='Total assets (2022) (US$ billion)', ascending=False).head(20)
+        df = df.sort_values(by='Market cap (Germany)', ascending=False).head(20)
         
         plt.figure(figsize=(12, 8))
-        plt.barh(df['Bank name'], df['Total assets (2022) (US$ billion)'])
-        plt.title('Total Assets of Top 20 Largest Banks in 2022')
-        plt.xlabel('Total Assets (US$ billion)')
+        plt.barh(df['Bank name'], df['Market cap (Germany)'])
+        plt.title('Market Cap of Top 20 Largest Banks in Germany in 2022')
+        plt.xlabel('Market Cap (US$ billion)')
         plt.ylabel('Bank Name')
         plt.tight_layout()
-        plt.legend(['Total assets (2022) (US$ billion)'], loc='best')
         plt.gca().invert_yaxis()
         plt.show()
         

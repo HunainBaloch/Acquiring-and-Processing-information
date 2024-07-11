@@ -1,101 +1,11 @@
-Rank,Bank name,Total assets (2022) (US$ billion),Country
-1,Industrial and Commercial Bank of China Limited,5742.86,USA
-2,China Construction Bank,5016.81,USA
-3,Agricultural Bank of China,4919.03,USA
-4,Bank of China,4192.12,USA
-5,JPMorgan Chase,3868.24,USA
-6,Bank of America,3051.38,USA
-7,Mitsubishi UFJ Financial Group,2967.91,USA
-8,HSBC,2864.59,USA
-9,BNP Paribas,2849.61,USA
-10,Crédit Agricole,2542.61,USA
-11,Citigroup Inc.,2416.68,USA
-12,Postal Savings Bank of China,2039.56,USA
-13,SMBC Group,2006.75,USA
-14,Mizuho Financial Group,1909.35,USA
-15,Bank of Communications,1883.72,USA
-16,Wells Fargo,1881.02,USA
-17,Banco Santander,1853.86,USA
-18,Barclays,1823.84,USA
-19,Japan Post Bank,1719.92,USA
-20,UBS,1679.36,USA
-21,Groupe BPCE,1636.35,USA
-22,Société Générale,1588.99,USA
-23,Royal Bank of Canada,1544.17,USA
-24,Toronto-Dominion Bank,1524.83,USA
-25,China Merchants Bank,1470.0,USA
-26,Goldman Sachs,1441.8,USA
-27,Deutsche Bank,1428.65,USA
-28,Industrial Bank (China),1343.54,USA
-29,China CITIC Bank,1239.28,USA
-30,Shanghai Pudong Development Bank,1184.28,USA
-31,Morgan Stanley,1180.23,USA
-32,Crédit Mutuel,1180.22,USA
-33,Lloyds Banking Group,1057.69,USA
-34,China Minsheng Bank,1051.97,USA
-35,Intesa Sanpaolo,1042.73,USA
-36,ING Group,1034.32,USA
-37,Scotiabank,1029.8,USA
-38,UniCredit,916.72,USA
-39,China Everbright Bank,913.49,USA
-40,NatWest Group,867.59,USA
-41,Bank of Montreal,859.05,USA
-42,Commonwealth Bank,837.21,USA
-43,Standard Chartered,819.92,USA
-44,La Banque postale,796.88,USA
-45,Ping An Bank,771.55,USA
-46,Banco Bilbao Vizcaya Argentaria,762.15,USA
-47,Norinchukin Bank,753.26,USA
-48,State Bank of India,694.94,USA
-49,Canadian Imperial Bank of Commerce,691.31,USA
-50,National Australia Bank,679.76,USA
-51,U.S.Bancorp,674.81,USA
-52,Rabobank,671.7,USA
-53,DZ Bank,670.13,USA
-54,Australia and New Zealand Banking Group,669.66,USA
-55,Westpac,653.39,USA
-56,Nordea,635.72,USA
-57,CaixaBank,604.03,USA
-58,Sberbank of Russia,566.07,USA
-59,KB Financial Group Inc,557.54,USA
-60,PNC Financial Services,557.26,USA
-61,Resona Holdings,557.1,USA
-62,Truist Financial Corp,555.26,USA
-63,DBS Bank,554.4,USA
-64,Danske Bank,540.66,USA
-65,Huaxia Bank,540.04,USA
-66,Shinhan Bank,537.44,USA
-67,China Guangfa Bank,528.91,USA
-68,Sumitomo Mitsui Trust Holdings,516.83,USA
-69,Commerzbank,510.25,USA
-70,Capital One,455.25,USA
-71,Hana Financial Group,452.34,USA
-72,Bank of Beijing,447.54,USA
-73,Itaú Unibanco,439.5,USA
-74,OCBC Bank,417.61,USA
-75,Nonghyup Bank,417.37,USA
-76,Bank of Jiangsu,410.83,USA
-77,The Bank of New York Mellon,405.78,USA
-78,ABN AMRO,405.67,USA
-79,Bank of Shanghai,405.13,USA
-80,Woori Bank,382.05,USA
-81,KBC Bank,380.33,USA
-82,China Zheshang Bank,380.14,USA
-83,Banco do Brasil,379.78,USA
-84,United Overseas Bank,376.07,USA
-85,Nomura Holdings,373.41,USA
-86,Landesbank Baden-Württemberg,346.45,USA
-87,Erste Group,346.12,USA
-88,Industrial Bank of Korea,343.49,USA
-89,Bank of Ningbo,343.05,USA
-90,Banco Bradesco,340.41,USA
-91,SEB Group,338.91,USA
-92,VTB Bank,335.11,USA
-93,Handelsbanken,331.32,USA
-94,DNB ASA,328.5,USA
-95,Qatar National Bank,323.56,USA
-96,National Bank of Canada,312.67,USA
-97,Macquarie Group,313.47,USA
-98,Nationwide Building Society,311.93,USA
-99,Raiffeisen Gruppe,303.5,USA
-100,First Abu Dhabi Bank,302.22,USA
+Rank,Bank name,Market cap (US$ billion),Market cap (USA),Market cap (UK),Market cap (Germany),Market cap (China),Market cap (Japan),Market cap (India)
+1,JPMorgan Chase,432.92,432.92,336.292256,398.97907200000003,3145.466844,69951.2136,36180.42316
+2,Bank of America,231.52,231.52,179.844736,213.368832,1682.154864,37409.0016,19348.82096
+3,Industrial and Commercial Bank of China,194.56,194.56,151.134208,179.306496,1413.614592,31437.004800000002,16259.96288
+4,Agricultural Bank of China,160.68,160.68,124.81622400000002,148.082688,1167.452676,25962.674400000004,13428.50964
+5,HDFC Bank,157.91,157.91,122.664488,145.529856,1147.326687,25515.097800000003,13197.012429999999
+6,Wells Fargo,155.87,155.87,121.07981600000001,143.649792,1132.504659,25185.4746,13026.523509999999
+7,HSBC Holdings PLC,148.9,148.9,115.66552000000001,137.22624,1081.86273,24059.262000000002,12444.019699999999
+8,Morgan Stanley,140.83,140.83,109.39674400000001,129.788928,1023.2285310000001,22755.311400000002,11769.58559
+9,China Construction Bank,139.82,139.82,108.612176,128.85811199999998,1015.8901739999999,22592.1156,11685.176859999998
+10,Bank of China,136.81,136.81,106.27400800000001,126.084096,994.020417,22105.759800000003,11433.62213

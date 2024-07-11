@@ -1,3 +1,4 @@
+import pandas as pd
 from extract_data import extract_data
 from transform_data import transform_data
 from load_data import load_to_csv, load_to_database
@@ -20,7 +21,9 @@ def main():
         return
     
     try:
-        df = transform_data(data)
+        # Load exchange rates
+        exchange_rates = pd.read_csv('exchange_rate.csv', index_col='Country')['Rate'].to_dict()
+        df = transform_data(data, exchange_rates)
         log_message('INFO', 'Data transformation completed successfully')
     except Exception as e:
         log_message('ERROR', f"An error occurred during data transformation: {e}")
@@ -36,17 +39,23 @@ def main():
         log_message('ERROR', f"An error occurred during data loading: {e}")
         return
     
-    query = 'SELECT * FROM banks WHERE Country="USA"'
-    try:
-        result_df = run_query(query)
-        if result_df is None or result_df.empty:
-            log_message('WARNING', 'Query returned no results.')
-        else:
-            log_message('INFO', 'Data queried successfully')
-            print(result_df)
-    except Exception as e:
-        log_message('ERROR', f"An error occurred during data querying: {e}")
-        return
+    queries = [
+        'SELECT * FROM banks WHERE Country="USA"',
+        'SELECT * FROM banks ORDER BY "Market cap (US$ billion)" DESC LIMIT 10',
+        'SELECT "Bank name", "Market cap (Germany)" FROM banks ORDER BY "Market cap (Germany)" DESC LIMIT 10'
+    ]
+
+    for query in queries:
+        try:
+            result_df = run_query(query)
+            if result_df is None or result_df.empty:
+                log_message('WARNING', f'Query returned no results: {query}')
+            else:
+                log_message('INFO', f'Data queried successfully: {query}')
+                print(result_df)
+        except Exception as e:
+            log_message('ERROR', f"An error occurred during data querying: {e}")
+            return
     
     try:
         visualize_data(result_df)
