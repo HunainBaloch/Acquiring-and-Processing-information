@@ -1,32 +1,22 @@
-import logging
 import requests
 from bs4 import BeautifulSoup
+from io import StringIO
 import pandas as pd
-
-logging.basicConfig(level=logging.INFO, format='%(asctime)s:%(levelname)s:%(message)s')
 
 def extract_data(url):
     try:
-        logging.info("Extracting data from Wikipedia")
         response = requests.get(url)
-        if response.status_code != 200:
-            logging.error(f"Failed to retrieve the webpage. Status code: {response.status_code}")
-            return None
-
+        response.raise_for_status()
         soup = BeautifulSoup(response.content, 'html.parser')
-        tables = soup.find_all('table', {'class': 'wikitable sortable mw-collapsible'})
-        logging.info(f"Found {len(tables)} tables with the specified class")
-
-        if not tables:
-            logging.info("Failed to find the table in the HTML structure.")
-            with open('page_content.html', 'w', encoding='utf-8') as file:
-                file.write(response.text)
+        tables = soup.find_all('table', {'class': 'wikitable'})
+        if len(tables) < 2:
             return None
-
-        df = pd.read_html(str(tables[1]))[0]  # Assuming the required table is the second one
-        logging.info(f"Table extracted with {df.shape[0]} rows and {df.shape[1]} columns.")
+        html_content = str(tables[1])
+        df = pd.read_html(StringIO(html_content))[0]
         return df
-
+    except requests.RequestException as e:
+        print(f"Request error: {e}")
+        return None
     except Exception as e:
-        logging.error(f"An error occurred: {e}")
+        print(f"Error extracting data: {e}")
         return None
