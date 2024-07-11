@@ -32,3 +32,14 @@
 2024-07-11 15:41:44,074 - INFO - Data queried successfully
 2024-07-11 15:41:48,065 - INFO - Data visualization completed successfully
 2024-07-11 15:41:48,065 - INFO - Project completed
+2024-07-11 15:45:22,608 - INFO - Project started
+2024-07-11 15:45:23,910 - INFO - Data extraction completed successfully
+2024-07-11 15:45:23,910 - INFO - Data transformation completed successfully
+2024-07-11 15:45:23,910 - INFO - Data loaded to CSV successfully
+2024-07-11 15:45:23,931 - INFO - Data loaded to database successfully
+2024-07-11 15:45:23,931 - INFO - Running the query
+2024-07-11 15:45:23,931 - INFO - Query executed successfully
+2024-07-11 15:45:23,931 - INFO - Connection to SQLite database closed
+2024-07-11 15:45:23,931 - INFO - Data queried successfully
+2024-07-11 15:45:43,277 - INFO - Data visualization completed successfully
+2024-07-11 15:45:43,285 - INFO - Project completed
